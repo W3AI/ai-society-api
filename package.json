@@ -11,5 +11,8 @@
     "url": "https://github.com/W3AI/innovation-engine-m8"
   },
   "author": "Stefan Ianta",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
