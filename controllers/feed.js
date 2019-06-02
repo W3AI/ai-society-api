@@ -11,7 +11,7 @@ exports.getPosts = (req, res, next) => {
                 creator: {
                     name: 'Steve'
                 },
-                date: new Date()
+                createdAt: new Date()
             }]
     });
 };
