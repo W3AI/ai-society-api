@@ -2,7 +2,12 @@ const fs = require('fs');
 
 exports.getPosts = (req, res, next) => {
     res.status(200).json({
-        posts: [{title: 'First Post', content: 'This is the first post!'}]
+        posts: [
+            {
+                title: 'First Post', 
+                content: 'This is the first post!', 
+                imageUrl: 'images/duck.jpeg'
+            }]
     });
 };
 
@@ -13,6 +18,6 @@ exports.createPost = (req, res, next) => {
     // create post in db
     res.status(201).json({
         message: 'Post created successfully!',
-        post: {id: new Date().toISOString(), title: title, content: content}
+        post: { id: new Date().toISOString(), title: title, content: content }
     });
 };
