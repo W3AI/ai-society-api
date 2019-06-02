@@ -19,7 +19,7 @@ exports.getPosts = (req, res, next) => {
 
 exports.createPost = (req, res, next) => {
     const errors = validationResult(req);
-    if (!errors.isEmpty) {
+    if (!errors.isEmpty()) {
         return res
             .status(422)
             .json({
