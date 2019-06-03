@@ -35,11 +35,11 @@ exports.createPost = (req, res, next) => {
     const post = new Post({
         title: title,
         content: content,
+        imageUrl: 'images/earth-teams.png',
         creator: { name: 'Steve' },
     });
     post.save()
     .then(result => {
-        console.log(result);
         res.status(201).json({
             message: 'Post created successfully!',
             post: result
