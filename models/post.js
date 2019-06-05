@@ -7,6 +7,14 @@ const postSchema = new Schema(
             type: String,
             required: true
         },
+        tags: {
+            type: String,
+            required: false
+        },
+        repoUrl: {
+            type: String,
+            required: false
+        },
         imageUrl: {
             type: String,
             required: true
