@@ -1,4 +1,5 @@
 // const fs = require('fs');
+const execFile = require('child_process').execFile;
 const { validationResult } = require('express-validator/check');
 
 const Post = require('../models/post');
@@ -48,4 +49,28 @@ exports.createPost = (req, res, next) => {
     .catch(err => {
         console.log(err);
     });
+
+    // Apply content / skill to current project(s)
+    const validation = true;    // for now / development  
+    // ToDo: Genetic Validator - Regulatory / Governance / Identity
+    if (validation) {
+
+        // ToDo: Apply / stage change from post content onto current project(s)
+
+        // ToDo: Test staged change(s)  against current relevant project(s) 
+
+        const testProgress = true;  // for dev - testsPassed > 0
+
+        if (testProgress) {
+            const message = `${post.creator} : ${post.title}`;
+            const child = execFile('gc', [message], (error, stdout, stderr) => {
+                if (error) {
+                    console.error('stderr', stderr);
+                    throw error;
+                }
+                console.log('stdout', stdout);
+            });
+        }
+    }
+
 };
