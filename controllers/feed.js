@@ -1,4 +1,5 @@
 // const fs = require('fs');
+// const path ... ToDo
 const execFile = require('child_process').execFile;
 const { validationResult } = require('express-validator/check');
 
@@ -64,7 +65,8 @@ exports.createPost = (req, res, next) => {
 
         if (testProgress) {
             const message = `"${post.creator.name} : ${post.title}"`;
-            const child = execFile('gc', [message], (error, stdout, stderr) => {
+            // const child = execFile('../gc', [message], (error, stdout, stderr) => {
+            const child = execFile('git', ['--version'], (error, stdout, stderr) => {
                 if (error) {
                     console.error('stderr', stderr);
                     throw error;
