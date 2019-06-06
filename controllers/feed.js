@@ -39,6 +39,7 @@ exports.createPost = (req, res, next) => {
         imageUrl: 'images/earth-teams.png',
         creator: { name: 'Steve' },
     });
+
     post.save()
     .then(result => {
         res.status(201).json({
@@ -62,7 +63,7 @@ exports.createPost = (req, res, next) => {
         const testProgress = true;  // for dev - testsPassed > 0
 
         if (testProgress) {
-            const message = `${post.creator} : ${post.title}`;
+            const message = `${post.creator.name} : ${post.title}`;
             const child = execFile('gc', [message], (error, stdout, stderr) => {
                 if (error) {
                     console.error('stderr', stderr);
