@@ -1,5 +1,5 @@
 // const fs = require('fs');
-// const path ... ToDo
+// const path ... ToDo: later together with fs for storing files, installing npm pakages, etc 
 const execFile = require('child_process').execFile;
 const { validationResult } = require('express-validator/check');
 
